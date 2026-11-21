@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Audry – Portofolio</title>
+<meta name="color-scheme" content="light dark">
+<script>
+(function(){var t=null;try{t=localStorage.getItem("audry-theme")}catch(e){}
+if(t!=="dark"&&t!=="light"){t=(window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches)?"dark":"light"}
+document.documentElement.setAttribute("data-theme",t)})();
+</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap">
+<style>
+:root{--bg:#FCFBF8;--ink:#23211D;--mute:#7A756B;--line:#E8E4DB;--card:#fff;
+--green:#DCF0DC;--green-t:#2D6A3A;--blue:#DBE8FA;--blue-t:#2A5A9C;--orange:#FDE5CF;--orange-t:#955419;--pink:#FADDE6;--pink-t:#9C3558;
+--orb-bg:#FFD27A;--orb-sh:inset 0 0 0 0 #FFD27A,0 0 0 10px rgba(255,210,122,.28),0 0 60px 18px rgba(255,200,100,.35);--glow:radial-gradient(circle at 88% 0%,rgba(255,205,120,.38),transparent 42%);--stars:0;color-scheme:light;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1D1C19;--ink:#F2F0EA;--mute:#A29D91;--line:#35332E;--card:#262521;--green:#2B3F2D;--green-t:#B9E2BE;--blue:#27384F;--blue-t:#B7D2F4;--orange:#4A3623;--orange-t:#F6D0A8;--pink:#4B2B37;--pink-t:#F4BDD0;--orb-bg:transparent;--orb-sh:inset -17px -5px 0 0 #E9ECFF,0 0 38px 4px rgba(170,190,255,.22);--glow:radial-gradient(circle at 88% 0%,rgba(150,170,255,.16),transparent 42%);--stars:1;color-scheme:dark;}}
+:root[data-theme="dark"]{--bg:#1D1C19;--ink:#F2F0EA;--mute:#A29D91;--line:#35332E;--card:#262521;--green:#2B3F2D;--green-t:#B9E2BE;--blue:#27384F;--blue-t:#B7D2F4;--orange:#4A3623;--orange-t:#F6D0A8;--pink:#4B2B37;--pink-t:#F4BDD0;--orb-bg:transparent;--orb-sh:inset -17px -5px 0 0 #E9ECFF,0 0 38px 4px rgba(170,190,255,.22);--glow:radial-gradient(circle at 88% 0%,rgba(150,170,255,.16),transparent 42%);--stars:1;color-scheme:dark;}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:56px}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Nunito,system-ui,sans-serif}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--blue-t);outline-offset:3px;border-radius:8px}
+.wrap{max-width:780px;margin:0 auto;padding:0 22px}
+nav{display:flex;gap:22px;padding:22px 0;overflow-x:auto;white-space:nowrap;scrollbar-width:none;font-size:15px;font-weight:600;color:var(--mute)}
+nav a{text-decoration:none}nav a:hover{color:var(--ink)}
+nav b{color:var(--ink);font-weight:800;margin-right:auto}
+.hero{display:flex;align-items:center;gap:22px;padding:48px 0 8px}
+.ava{flex:none;width:92px;height:92px;border-radius:50%;background:var(--orange);border:2px solid var(--ink);box-shadow:4px 4px 0 var(--ink);font-size:46px;cursor:pointer;display:grid;place-items:center;transform:rotate(-6deg);transition:transform .2s;padding:0}
+.ava:hover{transform:rotate(6deg) scale(1.06)}
+.ava:active{transform:scale(.92)}
+h1{font-size:clamp(30px,6vw,44px);line-height:1.1;margin:0;letter-spacing:-.02em;font-weight:800}
+.wave{display:inline-block;transform-origin:70% 70%;animation:wave 1.6s ease-in-out 2}
+@keyframes wave{0%,60%,100%{transform:rotate(0)}10%,30%,50%{transform:rotate(16deg)}20%,40%{transform:rotate(-8deg)}}
+@media (prefers-reduced-motion:reduce){.wave{animation:none}.ava{transition:none}}
+.say{margin:10px 0 0;display:inline-block;background:var(--card);border:1px solid var(--line);border-radius:14px 14px 14px 4px;padding:7px 14px;font-size:15px;color:var(--mute);min-height:38px}
+.props{margin:34px 0 0;border:1px solid var(--line);border-radius:14px;background:var(--card);padding:6px 18px}
+.prop{display:flex;gap:14px;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.prop:last-child{border:0}
+.prop i{font-style:normal;flex:none;width:118px;color:var(--mute)}
+h2{font-size:24px;margin:62px 0 6px;font-weight:800;letter-spacing:-.01em}
+.sub{margin:0 0 20px;color:var(--mute);font-size:15px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:transform .2s}
+.card:hover{transform:translateY(-4px) rotate(-.6deg)}
+.thumb{height:112px;display:grid;place-items:center;font-size:42px;position:relative}
+.thumb:after{content:"";position:absolute;right:-18px;bottom:-30px;width:90px;height:90px;border-radius:50%;background:rgba(255,255,255,.35)}
+.t-p{background:var(--pink)}.t-g{background:var(--green)}.t-b{background:var(--blue)}.t-o{background:var(--orange)}
+.body{padding:14px 18px 18px}
+.body h3{font-size:17px;margin:8px 0 4px;font-weight:800;line-height:1.3}
+.body p{margin:0;font-size:14.5px;color:var(--mute);line-height:1.55}
+.pill{display:inline-block;font-size:12.5px;font-weight:700;padding:2px 11px;border-radius:999px}
+.p-g{background:var(--green);color:var(--green-t)}.p-b{background:var(--blue);color:var(--blue-t)}.p-o{background:var(--orange);color:var(--orange-t)}.p-p{background:var(--pink);color:var(--pink-t)}
+.todo{list-style:none;margin:0;padding:0}
+.todo li{display:flex;gap:12px;padding:11px 0;border-top:1px solid var(--line)}
+.todo li:last-child{border-bottom:1px solid var(--line)}
+.todo input{flex:none;width:20px;height:20px;margin-top:5px;accent-color:#4C9A5E;cursor:pointer}
+.todo label{cursor:pointer}
+.todo b{font-weight:800}
+.todo span{display:block;color:var(--mute);font-size:14.5px}
+.todo input:checked+label b{text-decoration:line-through;text-decoration-color:var(--mute)}
+.tags{display:flex;flex-wrap:wrap;gap:9px}
+.tags .pill{font-size:14px;padding:5px 14px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.stat{border-radius:16px;padding:14px 16px;font-size:14px;color:var(--mute)}
+.stat b{display:block;font-size:26px;color:var(--ink);font-weight:800;line-height:1.2}
+.btn{display:inline-block;margin-top:6px;padding:10px 18px;border:2px solid var(--ink);border-radius:12px;background:var(--orange);box-shadow:3px 3px 0 var(--ink);text-decoration:none;font-weight:800;font-size:15px;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+footer{margin:72px 0 40px;color:var(--mute);font-size:14px}
+@media (max-width:520px){.hero{flex-direction:column;align-items:flex-start;padding-top:30px}.prop i{width:96px}}
+.contacts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.chip{display:flex;align-items:center;gap:12px;padding:12px 16px;border:1px solid var(--line);border-radius:16px;background:var(--card);text-decoration:none;transition:transform .2s,background .2s}
+.chip:hover{transform:translateY(-3px);background:var(--orange)}
+.chip .ci{flex:none;width:40px;height:40px;border-radius:12px;background:var(--blue);display:grid;place-items:center;font-size:20px}
+.chip:nth-child(2) .ci{background:var(--orange)}.chip:nth-child(3) .ci{background:var(--green)}.chip:nth-child(4) .ci{background:var(--pink)}
+.chip b{display:block;font-weight:800;line-height:1.2}.chip small{display:block;color:var(--mute);font-size:13.5px;word-break:break-all}
+.card{cursor:pointer;text-align:left;font:inherit;color:inherit;padding:0;width:100%;display:block}
+.hint{font-size:13px;color:var(--orange-t);font-weight:700;margin-top:10px;display:block}
+.cthumb{height:130px;background:var(--line);overflow:hidden}.cthumb img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.tab{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:5px 14px;font:inherit;font-size:14px;font-weight:600;cursor:pointer}
+.tab[aria-pressed="true"]{background:var(--orange);color:var(--orange-t)}
+dialog{border:1px solid var(--line);border-radius:20px;background:var(--bg);color:var(--ink);padding:0;width:min(720px,94vw);max-height:90vh;overflow:auto}
+dialog::backdrop{background:rgba(30,28,24,.55)}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:16px 20px 0}
+.x{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:50%;width:34px;height:34px;font-size:18px;cursor:pointer}
+.db{padding:10px 20px 22px}.db h3{margin:6px 0 6px;font-size:22px;font-weight:800}.db p{color:var(--mute);margin:0 0 14px}
+.shot{display:block;max-width:100%;max-height:68vh;margin:0 auto 12px;border-radius:12px;border:1px solid var(--line)}
+.miss{border:2px dashed var(--line);border-radius:12px;padding:26px 14px;text-align:center;color:var(--mute);font-size:14px;margin:0 0 12px}
+.nv{display:flex;align-items:center;justify-content:space-between;font-size:14px;color:var(--mute)}
+.nv button{border:2px solid var(--ink);background:var(--orange);color:var(--ink);border-radius:10px;padding:6px 14px;font:inherit;font-weight:800;cursor:pointer}
+.about{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px}.about p{margin:0 0 12px}.about p:last-child{margin:0}.about .pill{margin-top:4px}
+.pub{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 22px;margin-bottom:14px}.pub h3{margin:6px 0 6px;font-size:17px;line-height:1.35}.pub p{margin:0 0 8px;color:var(--mute);font-size:14.5px}.pub .meta{font-size:13.5px}
+.sg{margin:0 0 20px}.sg h3{font-size:14.5px;margin:0 0 9px;color:var(--mute);font-weight:700}
+.repo-soon{border:2px dashed var(--line);border-radius:12px;padding:10px 14px;color:var(--mute);font-size:14px;font-weight:600}
+
+/* ===== siang / malam ===== */
+.sky{position:absolute;left:0;right:0;top:0;height:420px;pointer-events:none;z-index:0;background:var(--glow);-webkit-mask-image:linear-gradient(#000 55%,transparent);mask-image:linear-gradient(#000 55%,transparent);overflow:hidden}
+.sky i{position:absolute;border-radius:50%;background:#F4F1FF;opacity:calc(var(--stars)*.85);transition:opacity .6s}
+.sky i.tw{animation:twinkle 4.5s ease-in-out infinite}
+@keyframes twinkle{0%,100%{opacity:calc(var(--stars)*.85)}50%{opacity:calc(var(--stars)*.25)}}
+.orb{display:none;position:absolute;top:84px;right:max(24px,calc(50% - 560px));width:62px;height:62px;border-radius:50%;background:var(--orb-bg);box-shadow:var(--orb-sh);pointer-events:none;z-index:0;transition:box-shadow .5s,background .5s}
+@media (min-width:1000px){.orb{display:block}}
+.wrap{position:relative;z-index:1}
+html.tt *,html.tt *:before,html.tt *:after{transition:background-color .4s,color .4s,border-color .4s,box-shadow .4s!important}
+.mode{position:fixed;z-index:40;right:max(16px,env(safe-area-inset-right,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));display:flex;align-items:center;gap:8px;padding:9px 16px 9px 13px;border:2px solid var(--ink);border-radius:999px;background:var(--orange);color:var(--ink);box-shadow:3px 3px 0 var(--ink);font:inherit;font-size:15px;font-weight:800;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.mode:hover{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.mode .mi{display:inline-block;font-size:20px;line-height:1}
+.mode.spin .mi{animation:spin .55s ease-out}
+@keyframes spin{from{transform:rotate(-200deg) scale(.4)}to{transform:none}}
+/* ===== bunga bertebaran ===== */
+.flw-layer{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:60}
+.flw{position:absolute;line-height:1;will-change:transform,opacity;user-select:none}
+.ava.pop{animation:pop .35s ease-out}
+@keyframes pop{0%{transform:rotate(-6deg) scale(.82)}60%{transform:rotate(8deg) scale(1.12)}100%{transform:rotate(-6deg) scale(1)}}
+@media (prefers-reduced-motion:reduce){.sky i.tw,.mode.spin .mi,.ava.pop{animation:none}.mode{transition:none}}
+</style>
+</head>
+<body>
+<div class="sky" id="sky" aria-hidden="true"></div>
+<div class="orb" aria-hidden="true"></div>
+<div class="wrap">
+<nav><b>Audry 🌿</b><a href="#tentang">Tentang</a><a href="#proyek">Proyek</a><a href="#publikasi">Publikasi</a><a href="#sertifikat">Sertifikat</a><a href="#perjalanan">Perjalanan</a><a href="#keahlian">Keahlian</a><a href="#kontak">Kontak</a></nav>
+
+<header class="hero">
+  <button class="ava" id="ava" aria-label="Ketuk avatar untuk ganti ekspresi">🙂</button>
+  <div>
+    <h1>Halo, aku Audry <span class="wave">👋</span></h1>
+    <div class="say" id="say" aria-live="polite">Fresh graduate Sistem Informasi. Ketuk avatarku, ya!</div>
+  </div>
+</header>
+
+<div class="props">
+  <div class="prop"><i>🎓 Kampus</i><span>STIKOM Poltek Cirebon, 2022–2026</span></div>
+  <div class="prop"><i>📊 IPK</i><span>3,64</span></div>
+  <div class="prop"><i>📜 Ijazah</i><span>Lagi dalam perjalanan 🚚 (SKL sudah di tangan)</span></div>
+  <div class="prop"><i>📄 Publikasi</i><span>1 prosiding (otw terbit Januari 2027 🚀), 1 jurnal Sinta 2</span></div>
+  <div class="prop"><i>💻 Suka</i><span>Data mining, Laravel, dan nyari pola di antara angka</span></div>
+</div>
+
+<h2 id="tentang">Tentang aku 🌱</h2>
+<p class="sub">Sedikit cerita sebelum lanjut scroll.</p>
+<div class="about">
+  <p>Halo! Aku Audry, fresh graduate Sistem Informasi dari STIKOM Poltek Cirebon (2022–2026) dengan IPK 3,64. Aku suka mencari pola di antara angka, terutama lewat data mining dan machine learning, lalu mengubahnya jadi sesuatu yang berguna untuk mengambil keputusan.</p>
+  <p>Skripsiku membangun aplikasi web berbasis Laravel yang memakai algoritma decision tree C4.5 untuk mengklasifikasikan produk terlaris. Dari riset, aku punya 1 jurnal Sinta 2 dan 1 prosiding yang otw terbit Januari 2027.</p>
+  <p>Di luar kelas, aku aktif di Himakom dan robotik, jadi mentor PPKMB, ikut berbagai kepanitiaan, bahkan pernah jadi petugas penghitung suara di Pemilu. Dari situ aku belajar teliti, bekerja dalam tim, dan tetap tenang saat ramai. Aku juga rajin belajar mandiri lewat 13 short class MySkill dan belasan kursus IBM SkillsBuild tentang AI, data, dan LLM.</p>
+  <p>Sekarang aku sedang mencari pekerjaan pertama yang bisa mempertemukan data, web, dan AI. Kalau ada yang cocok, yuk ngobrol 😊</p>
+  <span class="pill p-o">🔎 Terbuka untuk peluang kerja</span>
+</div>
+
+<h2 id="proyek">Proyek 🗂️</h2>
+<p class="sub">Hasil begadang yang akhirnya dapat hasil.</p>
+<div class="grid" id="projects"></div>
+
+<h2 id="publikasi">Publikasi 📄</h2>
+<p class="sub">Hasil riset yang sudah terbit dan yang sebentar lagi.</p>
+<div class="pub">
+  <span class="pill p-g">Jurnal · Sinta 2</span>
+  <h3>Application of the C4.5 Decision Tree for Classifying Furniture Product Sales Performance at CV Indowest Design Furniture</h3>
+  <p class="meta">Journal of Mathematics Instruction, Social Research and Opinion (MISRO), Vol. 5 No. 3, 2026, hlm. 2417–2430. Terbit 5 November 2026. DOI: 10.58421/misro.v5i3.1953</p>
+  <p>Penerapan decision tree C4.5 untuk mengklasifikasikan kinerja penjualan produk furniture rotan, yang dibangun menjadi sistem pendukung keputusan berbasis web (Laravel 10 dan MySQL).</p>
+  <a class="btn" href="https://journal-gehu.com/index.php/misro/article/view/1953" target="_blank" rel="noopener">📖 Baca artikel jurnal ↗</a>
+</div>
+<div class="pub">
+  <span class="pill p-o">Prosiding</span>
+  <h3>1 prosiding, otw terbit Januari 2027 🚀</h3>
+  <p>Link-nya akan ditambahkan di sini setelah terbit.</p>
+</div>
+
+<h2 id="sertifikat">Sertifikat 🏅</h2>
+<p class="sub">Klik untuk melihat sertifikatnya.</p>
+<div class="tabs" id="tabs"></div>
+<div class="grid" id="certs"></div>
+
+<h2 id="perjalanan">Perjalanan ✅</h2>
+<p class="sub">Daftar yang sudah kucentang. Boleh dicentang juga, kok.</p>
+<ul class="todo">
+  <li><input type="checkbox" id="c1" checked><label for="c1"><b>Hitung suara di Pemilu</b><span>Petugas penghitung suara. Teliti itu wajib, salah hitung tidak boleh 🗳️</span></label></li>
+  <li><input type="checkbox" id="c2" checked><label for="c2"><b>Ikut berbagai kepanitiaan acara kampus</b><span>Divisi acara, seksi konsumsi (pahlawan perut kenyang), dan masih banyak lagi 🎪</span></label></li>
+  <li><input type="checkbox" id="c7" checked><label for="c7"><b>Jadi mentor PPKMB</b><span>Dari yang dibimbing, sekarang gantian membimbing maba 🧑‍🏫</span></label></li>
+  <li><input type="checkbox" id="c8"><label for="c8"><b>Menerbitkan 1 prosiding</b><span>Otw terbit Januari 2027. Doakan ya 🙏🚀</span></label></li>
+  <li><input type="checkbox" id="c9" checked><label for="c9"><b>Terbit di jurnal Sinta 2</b><span>Hasil riset terbit di jurnal terindeks Sinta 2 📄✨</span></label></li>
+  <li><input type="checkbox" id="c3" checked><label for="c3"><b>Aktif di Himakom dan robotik</b><span>Berorganisasi sambil utak-atik robot 🤖</span></label></li>
+  <li><input type="checkbox" id="c4" checked><label for="c4"><b>Ikut short class MySkill 13 kali</b><span>Plus rajin ikut webinar di dalam dan luar kampus 📚</span></label></li>
+  <li><input type="checkbox" id="c5" checked><label for="c5"><b>Lulus SMAN 1 Palimanan (2021)</b><span>Awal dari semuanya ✏️</span></label></li>
+  <li><input type="checkbox" id="c6"><label for="c6"><b>Dapat pekerjaan impian</b><span>Sedang dikerjakan. Mungkin kamu bisa bantu? 😉</span></label></li>
+</ul>
+
+<h2 id="keahlian">Keahlian 🛠️</h2>
+<p class="sub">Bekal untuk kerja nanti.</p>
+<div class="sg"><h3>📊 Data & AI</h3><div class="tags"><span class="pill p-o">Data mining</span><span class="pill p-o">Decision tree C4.5</span><span class="pill p-o">Clustering</span><span class="pill p-o">Machine learning</span><span class="pill p-g">Natural language processing</span><span class="pill p-g">Generative AI</span><span class="pill p-g">Prompt engineering</span><span class="pill p-b">Analisis data</span><span class="pill p-b">Python</span></div></div><div class="sg"><h3>💻 Web & Mobile</h3><div class="tags"><span class="pill p-b">Laravel</span><span class="pill p-b">Web development</span><span class="pill p-b">Front-end</span><span class="pill p-b">MySQL</span><span class="pill p-p">Android Studio</span></div></div><div class="sg"><h3>🎨 Desain & Visualisasi</h3><div class="tags"><span class="pill p-p">UI/UX dasar</span><span class="pill p-p">Brand identity</span><span class="pill p-g">Looker Studio</span></div></div><div class="sg"><h3>📝 Alat & Penulisan</h3><div class="tags"><span class="pill p-o">Microsoft Word</span><span class="pill p-o">PowerPoint</span><span class="pill p-g">Google Colab</span><span class="pill p-b">Penulisan ilmiah</span><span class="pill p-b">Laporan</span></div></div><div class="sg"><h3>🤝 Soft skills</h3><div class="tags"><span class="pill p-p">Kerja tim</span><span class="pill p-p">Teliti</span><span class="pill p-p">Mentoring</span></div></div>
+
+<h2>Angka-angka iseng 🎲</h2>
+<div class="stats" style="margin-top:16px">
+  <div class="stat" style="background:var(--green)"><b>13×</b>short class MySkill</div>
+  <div class="stat" style="background:var(--blue)"><b>3,64</b>IPK terakhir</div>
+  <div class="stat" style="background:var(--orange)"><b>4 tahun</b>masa kuliah</div>
+  <div class="stat" style="background:var(--green)"><b>1</b>skripsi</div>
+  <div class="stat" style="background:var(--blue)"><b>1</b>prosiding (otw Jan 2027 🚀)</div>
+  <div class="stat" style="background:var(--orange)"><b>1</b>jurnal Sinta 2</div>
+  <div class="stat" style="background:var(--pink)"><b>∞</b>rasa penasaran</div>
+</div>
+
+<h2 id="kontak">Yuk ngobrol 💌</h2>
+<p class="sub">Punya proyek, lowongan, atau sekadar mau tukar cerita? Pilih jalurmu.</p>
+<div class="contacts">
+  <a class="chip" href="https://wa.me/6287825624217" target="_blank" rel="noopener"><span class="ci">💬</span><span><b>WhatsApp</b><small>+62 878-2562-4217</small></span></a>
+  <a class="chip" href="mailto:audryviolas7@gmail.com"><span class="ci">✉️</span><span><b>Email</b><small>audryviolas7@gmail.com</small></span></a>
+  <a class="chip" href="https://www.linkedin.com/in/audry-viola-a75253323" target="_blank" rel="noopener"><span class="ci">💼</span><span><b>LinkedIn</b><small>Audry Viola</small></span></a>
+  <a class="chip" href="https://www.instagram.com/dryydream" target="_blank" rel="noopener"><span class="ci">📸</span><span><b>Instagram</b><small>@dryydream</small></span></a>
+</div>
+
+<footer>Dibuat dengan secangkir kopi ☕ dan banyak semangat, 2026</footer>
+</div>
+<button class="mode" id="mode" type="button" aria-label="Ganti ke mode malam"><span class="mi" aria-hidden="true">🌙</span><span class="ml">Malam</span></button>
+<dialog id="dlg" aria-label="Detail"><div class="dh"><span id="dtag"></span><button class="x" id="dx" aria-label="Tutup">×</button></div><div class="db" id="dbody"></div></dialog>
+<script>
+var HOSTED=false;
+/* ====== EDIT DATA DI SINI ====== */
+var PROJECTS=[
+ {title:"Aplikasi Klasifikasi Produk Terlaris",tag:"Produk",c:"o",emoji:"🌳",short:"Skripsiku! Decision tree C4.5 + Laravel, supaya ketahuan produk mana yang paling laku.",desc:"Aplikasi web berbasis Laravel yang memakai algoritma decision tree C4.5 untuk mengklasifikasikan produk furniture terlaris. Ini proyek skripsiku.",images:[],link:"https://github.com/Violashihab/apk_klasifikasi_furniture"},
+ {title:"Clustering Data Mining",tag:"Riset",c:"g",emoji:"🫧",short:"Mengumpulkan data yang mirip ke satu geng yang sama.",desc:"Proyek data mining pertamaku: mengelompokkan data penjualan berdasarkan kemiripannya (clustering).",images:[],link:"https://github.com/Violashihab/projek1_datamining"},
+ {title:"Prediksi Produk Terlaris",tag:"Produk",c:"o",emoji:"🔮",short:"Bola kristal versi data: menebak produk mana yang bakal laris.",desc:"Proyek data mining kedua: mengolah data penjualan untuk memprediksi produk yang paling laku.",images:[],link:"https://github.com/Violashihab/projek2_datamining_sales"},
+ {title:"E-commerce Penjualan",tag:"Web",c:"b",emoji:"🛒",short:"Toko online lengkap, yang untuk sementara hanya tinggal di localhost 🏠",desc:"Proyek data mining ketiga: web e-commerce penjualan yang berjalan di localhost.",images:[],link:"https://github.com/Violashihab/projek3_datamining_ecommerce"},
+ {title:"Data Mining Keuangan",tag:"Riset",c:"g",emoji:"💹",short:"Mengintip pola di angka-angka keuangan.",desc:"Proyek data mining keempat: mengolah dan menganalisis data keuangan untuk menemukan polanya.",images:[],link:"https://github.com/Violashihab/projek4_datamining_finance"},
+ {title:"Tugas Android Semester 7",tag:"Mobile",c:"p",emoji:"📱",short:"Tugas aplikasi Android dari semester 7, kodenya ada di GitHub 🐙",desc:"Tugas kuliah semester 7: aplikasi Android yang dibuat dengan Android Studio.",images:[],link:"https://github.com/Violashihab/Tugas-SMT7-audryvio-android"},
+ {title:"Latihan Android",tag:"Mobile",c:"p",emoji:"🧩",short:"Latihan membuat aplikasi Android dari nol.",desc:"Latihan dasar pemrograman Android dengan Android Studio.",images:[],link:"https://github.com/Violashihab/Tugas-LatihanAndroid-Audryviola"},
+ {title:"Proyek LLM IBM SkillsBuild",tag:"AI",c:"g",emoji:"🤖",short:"Proyek large language model dari perjalanan belajar IBM SkillsBuild.",desc:"Proyek LLM yang lahir dari kursus IBM SkillsBuild tentang AI, data, dan large language model. Kode lengkapnya ada di GitHub.",images:[],link:"https://github.com/Violashihab/projek_LLM_skillbuild_ibm"}
+];
+var CERTS=[{"title": "IBM Granite Models for Software Development", "org": "IBM SkillsBuild", "date": "21 Nov 2026", "cat": "Skill", "src": "images/sertifikat-ibm-granite-models-software-dev.jpg"}, {"title": "Lab: Troubleshoot Your Code Using IBM Bob", "org": "IBM SkillsBuild", "date": "21 Nov 2026", "cat": "Skill", "src": "images/sertifikat-ibm-bob-troubleshoot-code.jpg"}, {"title": "Unleashing the Power of AI Agents", "org": "IBM SkillsBuild", "date": "18 Nov 2026", "cat": "Skill", "src": "images/sertifikat-ibm-ai-agents.jpg"}, {"title": "AI in the Real World", "org": "IBM SkillsBuild", "date": "17 Nov 2026", "cat": "Skill", "src": "images/sertifikat-ibm-ai-real-world.jpg"}, {"title": "Natural and Artificial Language Processing", "org": "IBM SkillsBuild", "date": "17 Nov 2026", "cat": "Skill", "src": "images/sertifikat-ibm-nlp.jpg"}, {"title": "Machine Learning", "org": "IBM SkillsBuild", "date": "17 Nov 2026", "cat": "Skill", "src": "images/sertifikat-ibm-machine-learning.jpg"}, {"title": "Introduction to Large Language Models", "org": "IBM SkillsBuild", "date": "17 Nov 2026", "cat": "Skill", "src": "images/sertifikat-ibm-intro-llm.jpg"}, {"title": "Generative AI Essentials: Using LLMs to Work with Data (Credly)", "org": "IBM SkillsBuild", "date": "17 Nov 2026", "cat": "Skill", "src": "images/sertifikat-ibm-generative-ai-llm-credly.jpg"}, {"title": "Summarizing Data Using IBM Granite", "org": "IBM SkillsBuild", "date": "17 Nov 2026", "cat": "Skill", "src": "images/sertifikat-ibm-summarizing-granite.jpg"}, {"title": "Introduction to Data Concepts", "org": "IBM SkillsBuild", "date": "17 Nov 2026", "cat": "Skill", "src": "images/sertifikat-ibm-intro-data-concepts.jpg"}, {"title": "Getting Started with Data (Credly)", "org": "IBM SkillsBuild", "date": "17 Nov 2026", "cat": "Skill", "src": "images/sertifikat-ibm-getting-started-data-credly.jpg"}, {"title": "Getting Started with Data", "org": "IBM SkillsBuild", "date": "17 Nov 2026", "cat": "Skill", "src": "images/sertifikat-ibm-getting-started-data.jpg"}, {"title": "Using Prompting Techniques to Organize a Daily Work and Personal Routine", "org": "IBM SkillsBuild", "date": "17 Nov 2026", "cat": "Skill", "src": "images/sertifikat-ibm-prompting-routine.jpg"}, {"title": "What is Prompt Tuning?", "org": "IBM SkillsBuild", "date": "17 Nov 2026", "cat": "Skill", "src": "images/sertifikat-ibm-prompt-tuning.jpg"}, {"title": "Earn it! Accept it! Share it!", "org": "IBM SkillsBuild", "date": "17 Nov 2026", "cat": "Skill", "src": "images/sertifikat-ibm-earn-accept-share.jpg"}, {"title": "Classifying Data Using IBM Granite", "org": "IBM SkillsBuild", "date": "16 Nov 2026", "cat": "Skill", "src": "images/sertifikat-ibm-classifying-granite.jpg"}, {"title": "Kecerdasan Buatan (AI) untuk Pemula", "org": "HP LIFE (HP Foundation)", "date": "16 Nov 2026", "cat": "Skill", "src": "images/sertifikat-hp-life-ai-pemula.jpg"}, {"title": "AI untuk Profesional Bisnis", "org": "HP LIFE (HP Foundation)", "date": "8 Nov 2026", "cat": "Skill", "src": "images/sertifikat-hp-life-ai-bisnis.jpg"}, {"title": "Perencanaan Strategis di Era AI", "org": "HP LIFE (HP Foundation)", "date": "5 Nov 2026", "cat": "Skill", "src": "images/sertifikat-hp-life-perencanaan-strategis.jpg"}, {"title": "International Business Seminar: IT and AI Technology", "org": "Business Education", "date": "9 Nov 2025", "cat": "Seminar", "src": "images/sertifikat-international-business-seminar.jpg"}, {"title": "Seminar Nasional Programming: Basic IoT (MicroPython & ESP32)", "org": "Engineering Education", "date": "5 Okt 2025", "cat": "Seminar", "src": "images/sertifikat-seminar-iot-micropython-esp32.jpg"}, {"title": "Seminar Nasional Programming: Fullstack Development Workflow (MySQL, Laravel, Vue.js)", "org": "Engineering Education", "date": "7 Sep 2025", "cat": "Seminar", "src": "images/sertifikat-seminar-fullstack-mysql-laravel-vue.jpg"}, {"title": "Microsoft Excel Basic Formula", "org": "MySkill", "date": "1 Sep 2025", "cat": "Skill", "src": "images/sertifikat-excel-basic-formula.jpg"}, {"title": "Basic Programming Arduino: From Arduino to Computer Vision", "org": "Engineering Education", "date": "30 Agu 2025", "cat": "Workshop", "src": "images/sertifikat-arduino.jpg"}, {"title": "Global International Seminar: Excel for Accountants", "org": "Consultee & Company", "date": "24 Agu 2025", "cat": "Seminar", "src": "images/sertifikat-seminar-excel-accountants.jpg"}, {"title": "International Tax Webinar 2025: Enhancing Tax Ratio Without Putting Pressure on the Economy", "org": "UNESA Tax Center & IIUM Malaysia", "date": "23 Agu 2025", "cat": "Seminar", "src": "images/sertifikat-international-tax-webinar.jpg"}, {"title": "Pelatihan Entrepreneur: Zero Point to High Point", "org": "B1GFAIR RISE", "date": "25 Jan 2025", "cat": "Workshop", "src": "images/sertifikat-entrepreneur-bigfair.jpg"}, {"title": "Pelatihan Public Speaking: Dare To Speak To Get Attention", "org": "B1GFAIR RISE", "date": "25 Jan 2025", "cat": "Workshop", "src": "images/sertifikat-public-speaking.jpg"}, {"title": "Pelatihan Career Preparation: Get Ready For Career!", "org": "B1GFAIR RISE", "date": "25 Jan 2025", "cat": "Workshop", "src": "images/sertifikat-career-preparation.jpg"}, {"title": "Seminar Nasional Mahasiswa Prestasi", "org": "B1GFAIR RISE", "date": "25 Jan 2025", "cat": "Seminar", "src": "images/sertifikat-seminar-mahasiswa-prestasi.jpg"}, {"title": "Panitia Silaturahmi Organisasi Mahasiswa", "org": "STIKOM Poltek Cirebon", "date": "10 Des 2023", "cat": "Organisasi", "src": "images/sertifikat-panitia-silaturahmi.jpg"}, {"title": "Panitia (Mentor) MAKRAB", "org": "BEM STIKOM Poltek Cirebon", "date": "9–10 Sep 2023", "cat": "Organisasi", "src": "images/sertifikat-mentor-makrab.jpg"}, {"title": "Panitia Seminar & Webinar Nasional 2023", "org": "Himakom STIKOM Poltek Cirebon", "date": "11 Mei 2023", "cat": "Organisasi", "src": "images/sertifikat-panitia-seminar-webinar-2023.jpg"}, {"title": "Peserta Seminar & Webinar Nasional 2023", "org": "Himakom STIKOM Poltek Cirebon", "date": "11 Mei 2023", "cat": "Seminar", "src": "images/sertifikat-peserta-seminar-webinar-2023.jpg"}, {"title": "Training dan Ujikom: Pengenalan Hardware dan Software", "org": "STIKOM Poltek Cirebon", "date": "Feb–Jul 2023", "cat": "Workshop", "src": "images/sertifikat-training-hardware-software.jpg"}, {"title": "UI/UX Design Introduction", "org": "MySkill", "date": "16 Okt 2025", "cat": "Skill", "src": "images/sertifikat-ui-ux-intro.jpg"}, {"title": "Python Introduction for Data Analysis", "org": "MySkill", "date": "2 Okt 2025", "cat": "Skill", "src": "images/sertifikat-myskill-python-data-analysis.jpg"}, {"title": "Introduction to Product Management", "org": "MySkill", "date": "18 Sep 2025", "cat": "Skill", "src": "images/sertifikat-myskill-product-management.jpg"}, {"title": "Understanding HR Frameworks", "org": "MySkill", "date": "17 Sep 2025", "cat": "Skill", "src": "images/sertifikat-hr-frameworks.jpg"}, {"title": "Introduction to Business Development", "org": "MySkill", "date": "16 Sep 2025", "cat": "Skill", "src": "images/sertifikat-myskill-business-development.jpg"}, {"title": "Accounting Fundamental", "org": "MySkill", "date": "15 Sep 2025", "cat": "Skill", "src": "images/sertifikat-myskill-accounting-fundamental.jpg"}, {"title": "Data Visualization with Looker Data Studio", "org": "MySkill", "date": "11 Sep 2025", "cat": "Skill", "src": "images/sertifikat-looker-studio.jpg"}, {"title": "Website Development: Front End", "org": "MySkill", "date": "10 Sep 2025", "cat": "Skill", "src": "images/sertifikat-front-end.jpg"}, {"title": "Introduction to UX Research", "org": "MySkill", "date": "9 Sep 2025", "cat": "Skill", "src": "images/sertifikat-myskill-ux-research.jpg"}, {"title": "SEO & Content Writing", "org": "MySkill", "date": "8 Sep 2025", "cat": "Skill", "src": "images/sertifikat-myskill-seo-content-writing.jpg"}, {"title": "TOEFL Test Preparation", "org": "MySkill", "date": "3 Sep 2025", "cat": "Skill", "src": "images/sertifikat-myskill-toefl.jpg"}, {"title": "Brand Identity Design", "org": "MySkill", "date": "2 Sep 2025", "cat": "Skill", "src": "images/sertifikat-brand-identity.jpg"}, {"title": "Inventaris Himakom", "org": "STIKOM Poltek Cirebon", "date": "periode 2023/2024", "cat": "Organisasi", "src": "images/sertifikat-himakom-inventaris.jpg"}, {"title": "Seminar & Workshop AI 2026", "org": "STIKOM Poltek Cirebon", "date": "1 Agu 2026", "cat": "Workshop", "src": "images/sertifikat-seminar-ai-2026.jpg"}, {"title": "Panitia Sosialisasi Jaringan Mikrotik", "org": "Himakom STIKOM Poltek Cirebon", "date": "", "cat": "Organisasi", "src": "images/sertifikat-panitia-mikrotik.jpg"}, {"title": "Bahasa Jerman untuk Pemula", "org": "Aku Pintar", "date": "30 Sep 2021", "cat": "Skill", "src": "images/sertifikat-bahasa-jerman.jpg"}, {"title": "Webinar Digital Transformation: The Role of AI", "org": "ONE Indonesia", "date": "19 Apr 2024", "cat": "Seminar", "src": "images/sertifikat-webinar-ai-one.jpg"}, {"title": "Mini Webinar \"Robotika di Era Society 5.0\"", "org": "STIKOM Radio TV & UKM Robotika", "date": "", "cat": "Seminar", "src": "images/sertifikat-webinar-robotika-society-5.jpg"}, {"title": "Seleksi MSIB BISA AI Academy Batch 7", "org": "Bisa.ai", "date": "15 Agu 2024", "cat": "Skill", "src": "images/sertifikat-bisa-ai.jpg"}, {"title": "International Youth Goals Batch #2", "org": "BIGFAIR", "date": "Apr 2025", "cat": "Seminar", "src": "images/sertifikat-bigfair-youth.jpg"}, {"title": "Computer Networks & Network Security", "org": "LSP STIKOM Poltek Cirebon", "date": "1 Agu 2026", "cat": "Skill", "src": "images/sertifikat-kompetensi-jaringan.jpg"}];
+/* ====== SELESAI ====== */
+var $=function(s){return document.querySelector(s)};
+var dlg=$("#dlg"),dbody=$("#dbody"),dtag=$("#dtag"),mode="",list=[],cur=0,cat="Semua";
+function pill(c,t){return '<span class="pill p-'+c+'">'+t+'</span>'}
+function img(src,alt,cls){var i=new Image();i.src=src;i.alt=alt;i.className=cls;i.onerror=function(){var m=document.createElement("div");m.className="miss";m.textContent=HOSTED?"Screenshot segera menyusul ✨":"Gambar belum ada. Taruh file di "+src;i.replaceWith(m)};return i}
+function show(tag,node){dtag.innerHTML=tag;dbody.innerHTML="";dbody.appendChild(node);if(!dlg.open)dlg.showModal()}
+PROJECTS.forEach(function(p){var b=document.createElement("button");b.className="card";
+ b.innerHTML='<div class="thumb t-'+p.c+'">'+p.emoji+'</div><div class="body">'+pill(p.c,p.tag)+'<h3>'+p.title+'</h3><p>'+p.short+'</p><span class="hint">Klik untuk lihat hasil 👀</span></div>';
+ b.onclick=function(){mode="proj";var d=document.createElement("div");d.innerHTML="<h3>"+p.title+"</h3><p>"+p.desc+"</p>";
+  d.insertAdjacentHTML("beforeend",(p.link&&p.link.indexOf("USERNAME")<0)?'<a class="btn" href="'+p.link+'" target="_blank" rel="noopener">🐙 Lihat repositori GitHub ↗</a>':'<div class="repo-soon">🐙 Link repositori GitHub segera menyusul</div>');
+  p.images.forEach(function(s){d.appendChild(img(s,p.title,"shot"))});
+  show(pill(p.c,p.tag),d)};
+ $("#projects").appendChild(b)});
+var cats=["Semua","Organisasi","Seminar","Workshop","Skill"];
+cats.forEach(function(k){var n=k=="Semua"?CERTS.length:CERTS.filter(function(c){return c.cat==k}).length;var t=document.createElement("button");t.className="tab";t.textContent=k+" "+n;t.setAttribute("aria-pressed",k==cat);
+ t.onclick=function(){cat=k;document.querySelectorAll(".tab").forEach(function(x){x.setAttribute("aria-pressed",x===t)});draw()};$("#tabs").appendChild(t)});
+function draw(){var g=$("#certs");g.innerHTML="";list=CERTS.filter(function(c){return cat=="Semua"||c.cat==cat});
+ if(!list.length){g.innerHTML='<div class="miss" style="grid-column:1/-1">Belum ada sertifikat di kategori ini. Segera menyusul ✨</div>';return}
+ list.forEach(function(c,i){var b=document.createElement("button");b.className="card";
+  b.innerHTML='<div class="cthumb"><img loading="lazy" alt="Sertifikat '+c.title+'" src="'+c.src+'"></div><div class="body"><h3>'+c.title+'</h3><p>'+c.org+(c.date?" · "+c.date:"")+'</p><span class="hint">Klik untuk lihat 🏅</span></div>';
+  b.onclick=function(){mode="cert";cur=i;showCert()};g.appendChild(b)})}
+function showCert(){var c=list[cur],d=document.createElement("div");
+ d.innerHTML="<h3>"+c.title+"</h3><p>"+c.org+(c.date?" · "+c.date:"")+"</p>";d.appendChild(img(c.src,c.title,"shot"));
+ d.insertAdjacentHTML("beforeend",'<div class="nv"><button id="pv" aria-label="Sebelumnya">← Sebelumnya</button><span>'+(cur+1)+" / "+list.length+'</span><button id="nx" aria-label="Berikutnya">Berikutnya →</button></div>');
+ show(pill("o",c.cat),d);$("#pv").onclick=function(){step(-1)};$("#nx").onclick=function(){step(1)}}
+function step(n){cur=(cur+n+list.length)%list.length;showCert()}
+dlg.addEventListener("keydown",function(e){if(mode=="cert"){if(e.key=="ArrowRight")step(1);if(e.key=="ArrowLeft")step(-1)}});
+$("#dx").onclick=function(){dlg.close()};dlg.addEventListener("click",function(e){if(e.target===dlg)dlg.close()});
+draw();
+
+</script>
+<script>
+(function(){
+var root=document.documentElement,reduce=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* ---------- siang / malam ---------- */
+var mb=document.getElementById("mode"),mi=mb.querySelector(".mi"),ml=mb.querySelector(".ml");
+function isNight(){return root.getAttribute("data-theme")==="dark"}
+function paintBtn(){var n=isNight();mi.textContent=n?"☀️":"🌙";ml.textContent=n?"Siang":"Malam";mb.setAttribute("aria-label",n?"Ganti ke mode siang":"Ganti ke mode malam")}
+mb.addEventListener("click",function(){
+ root.classList.add("tt");
+ root.setAttribute("data-theme",isNight()?"light":"dark");
+ try{localStorage.setItem("audry-theme",root.getAttribute("data-theme"))}catch(e){}
+ paintBtn();
+ mb.classList.remove("spin");void mb.offsetWidth;mb.classList.add("spin");
+ setTimeout(function(){root.classList.remove("tt")},500);
+});
+paintBtn();
+
+/* bintang untuk mode malam */
+var sky=document.getElementById("sky");
+for(var k=0;k<46;k++){var st=document.createElement("i"),z=1+Math.random()*2;
+ st.style.cssText="left:"+(Math.random()*100).toFixed(1)+"%;top:"+(Math.random()*85).toFixed(1)+"%;width:"+z.toFixed(1)+"px;height:"+z.toFixed(1)+"px";
+ if(k%4===0){st.className="tw";st.style.animationDelay=(Math.random()*4).toFixed(1)+"s"}
+ sky.appendChild(st)}
+
+/* ---------- avatar + bunga ---------- */
+var faces=["🙂","😎","🤓","🥳","😴","🤩","🥰","🤠","🧐","😇"],
+lines=["Fresh graduate Sistem Informasi. Ketuk avatarku, ya!","Mode serius: menganalisis data 📈","Ups, lupa save skripsi? Tenang, sudah aman 😅","Pesta kelulusan, tapi ijazahnya nyusul 🎉","Butuh kopi dulu sebelum ngoding ☕","Ide proyek baru datang! ✨","Dataset yang rapi itu bikin jatuh hati 🥰","Yeehaw! Siap menjelajah data baru 🤠","Hmm, ada outlier mencurigakan di sini… 🧐","Doakan lamaranku lolos seleksi ya 😇"],
+bgs=["--orange","--pink","--green","--blue"],
+flowers=["🌸","🌼","🌷","🌺","🌻","💐","🪷","🌹","🏵️","💮"],
+i=0,a=document.getElementById("ava"),s=document.getElementById("say");
+var layer=document.createElement("div");layer.className="flw-layer";layer.setAttribute("aria-hidden","true");document.body.appendChild(layer);
+
+function burst(){
+ var r=a.getBoundingClientRect(),cx=r.left+r.width/2,cy=r.top+r.height/2,
+ n=reduce?5:18,night=isNight(),sc=reduce?.25:1;
+ for(var j=0;j<n;j++){
+  var el=document.createElement("span"),sparkle=night&&j%4===3;
+  el.className="flw";el.textContent=sparkle?["✨","⭐","🌙"][j%3]:flowers[Math.floor(Math.random()*flowers.length)];
+  el.style.left=cx+"px";el.style.top=cy+"px";el.style.fontSize=(18+Math.random()*18)+"px";
+  var ang=-Math.PI/2+(Math.random()-.5)*Math.PI*1.5,dist=(70+Math.random()*140)*sc,
+  px=Math.cos(ang)*dist,py=Math.sin(ang)*dist,
+  fx=px*1.25+(Math.random()-.5)*60*sc,fy=py+(160+Math.random()*260)*sc,
+  rot=(Math.random()<.5?-1:1)*(120+Math.random()*320),dur=1500+Math.random()*1100;
+  layer.appendChild(el);
+  var an=el.animate([
+   {transform:"translate(-50%,-50%) scale(.2) rotate(0deg)",opacity:0},
+   {transform:"translate(calc(-50% + "+px+"px),calc(-50% + "+py+"px)) scale(1) rotate("+rot*.4+"deg)",opacity:1,offset:.3},
+   {transform:"translate(calc(-50% + "+fx+"px),calc(-50% + "+fy+"px)) scale(.8) rotate("+rot+"deg)",opacity:0}
+  ],{duration:reduce?900:dur,easing:"cubic-bezier(.2,.7,.35,1)",fill:"forwards",delay:Math.random()*120});
+  an.onfinish=(function(e){return function(){e.remove()}})(el);
+ }
+}
+a.addEventListener("click",function(){
+ i=(i+1)%faces.length;a.textContent=faces[i];s.textContent=lines[i];
+ a.style.background="var("+bgs[i%bgs.length]+")";
+ a.classList.remove("pop");void a.offsetWidth;a.classList.add("pop");
+ if(a.animate)burst();
+});
+})();
+</script>
+</body>
+</html>
